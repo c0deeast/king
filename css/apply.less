@@ -1,0 +1,133 @@
+*{
+
+}
+#main{
+  width: 1000px;
+  height: 725px;
+  margin: 0 auto;
+  .bbs_box{
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;
+    p{
+      width:762px;
+    }
+    .title{
+      float: left;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      .titleTxt{
+        width: 700px;
+        height: 30px;
+        font-weight: 500;
+        border: 1px solid #cccccc;
+        font-size: 18px;
+      }
+    }
+    .txt{
+      display: inline-block;
+      margin-top: 50px;
+      *{
+        float: right;
+      }
+      font-size: 20px;
+      font-weight: 700;
+      .innerTxt{
+        width: 700px;
+        font-weight: 500;
+        height: 350px;
+        overflow: scroll;
+        font-size: 18px;
+        resize: none;
+        border: 1px solid #cccccc;
+      }
+    }
+  }
+  .sub{
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: url("../images/img.jpg")left center no-repeat;
+    font-size: 13px;
+    float: right;
+    margin-right: 10px;
+    padding-left:20px;
+    line-height: 30px;
+    cursor: pointer;
+    position: relative;
+    input{
+      position: absolute;
+      top: -1000000px;
+    }
+  }
+  .sub_fiel{
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: url("../images/file.png")left center no-repeat;
+    font-size: 13px;
+    float: right;
+    margin-top: 1px;
+    padding-left:20px;
+    line-height: 30px;
+    cursor: pointer;
+    position: relative;
+    input{
+      position: absolute;
+      top: -1000000px;
+    }
+  }
+  .apply{
+    display: block;
+    width: 80px;
+    height: 40px;
+    background: rgb(50,126,238);
+    border: none;
+    color: #ffffff;
+    text-decoration: 1px 1px 1px #ccc;
+    font-size: 17px;
+    cursor: pointer;
+    margin-right: -170px;
+    float: right;
+    margin-top: 35px;
+  }
+  .tyle_nav{
+    height: 50px;
+    li{
+      float: left;
+      margin-right: 4px;
+      color: #666666;
+      a{
+        cursor: pointer;
+      }
+    }
+    .active{
+      color: #000000;
+    }
+  }
+}
+.service{
+  width: 54px;
+  height: 160px;
+  position: fixed;
+  left: 90%;
+  top: 550px;
+  .service_btn{
+    cursor: pointer;
+    background-color:#071019;
+    background-image: url("../images/kefu.png");
+    width: 100%;
+    background-position: center;
+    height: 115px;
+  }
+  .up{
+    cursor: pointer;
+    width: 100%;
+    height: 41px;
+    margin-top: 4px;
+    background-position: center;
+    background-image: url("../images/up.png");
+    background-color: #071019;
+  }
+}
