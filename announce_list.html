@@ -4,6 +4,12 @@
 <meta charset="utf-8"/> 
 <title>掌金宝</title>
 <meta name="description" content="">
+<!--[if IE 6]>  
+<script type="text/javascript" src="js/dd_png.js"></script>  
+<script type="text/javascript">  
+DD_belatedPNG.fix('.tel,.head_content');  
+</script>  
+<![endif]--> 
 <link rel="stylesheet" type="text/css" href="css/announce.css">
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 </head>
@@ -103,5 +109,8 @@
 	$('.top').on('click',function(){
 		$(window).scrollTop(0);
 	});
+	$('body').on('mousewheel',function(){
+        $('#back_top').css({"position":"absolute","top":"50%","right","4%"})
+    });
 </script>
 </html>
