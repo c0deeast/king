@@ -1,6 +1,7 @@
 html,body{
 	width: 100%;
 	height: 100%;
+	background-color: #e9e9e9;
 }
 *{
 	margin: 0;
@@ -128,7 +129,6 @@ a{
 			li{
 				float: left;
 				height: 337px;
-				background-color: #000;
 				background-position: 50% 50%;
 			}
 		}
@@ -144,6 +144,7 @@ a{
 				border:1px solid #ababab;
 				border-radius: 11px;
 				box-shadow: 0 0 2px #ababab;
+				cursor: pointer;
 			}
 			.slider_focus{
 				background-color: #ff8401;
@@ -152,13 +153,72 @@ a{
 	}
 }
 #main{
-	width: 100%;
+	width: 1002px;
+	margin: 0 auto;
+	overflow: hidden;
+	.main_nav{
+		width: inherit;
+		text-align: left;
+		font-size: 12px;
+		line-height: 36px;
+		color: #666;
+	}
+	h1{
+		font-weight: lighter;
+		color: #fff;
+		font-size: 18px;
+		text-indent: 32px;
+		background-color: #0371d2;
+		line-height: 46px;
+	}
+	ul{
+		background: #fff;
+		li{
+			width: 980px;
+			padding: 0 10px 0 10px;
+			line-height: 56px;
+			font-size: 14px;
+			color: #999;
+			border-bottom: 1px solid #e9e9e9;
+			span{
+				float: right;
+				line-height: 56px;
+				font-size: 14px;
+
+			}
+		}
+		margin-bottom: 34px;
+	}
+	.page{
+			float: right;
+			a{
+				display: block;
+				float: left;
+				color: #333;
+				height: 36px;
+				line-height: 36px;
+				padding: 0 2px;
+				margin: 0 2px;
+			}
+			.first_page,.last_page,.page_pre,.page_next{
+				padding: 0 20px;
+			}
+			.page_pre{
+				background-color: #bdd2e4;
+				margin-right: 10px;
+			}
+			.page_next{
+				background-color: #d6d6d6;
+				margin-left: 10px;
+			}
+		}
 }
 #footer{
 	width: 100%;
 	height: 189px;
 	background-color: #4e4e4e;
 	color: #b8b8b8;
+	margin-top: 60px;
 	.footer_link{
 		width: 1002px;
 		height: 50px;
@@ -183,7 +243,45 @@ a{
 	}
 	.copyright{
 		width: 1002px;
+		margin: 20px auto 0 auto;
 		text-align: center;
-		margin: 0 auto;
 	}
+}
+#back_top{
+	position: fixed;
+	right: 5%;
+	top: 40%;
+	.kefu{
+		width: 54px;
+		height: 115px;
+		cursor: pointer;
+		background: url(../images/kefu.png) 50% 50%;
+		background-color: #071019;
+		border-top-left-radius: 4px;
+	}
+	.top{
+		width: 54px;
+		height: 41px;
+		margin-top: 3px;
+		background: url(../images/up.png) 50% 50%;
+		background-color: #0271d1;
+		cursor: pointer;
+	}
+}
+#curtain{
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=80) !important;
+	opacity: 0.8;
+	-moz-opacity: 0.8;
+	z-index: 100;
+}
+#login_register{
+	position: fixed;
+	width: ;
+	height: ;
+	margin: 0 auto;
+	margin-top: ;
 }
