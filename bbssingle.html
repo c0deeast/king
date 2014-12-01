@@ -7,9 +7,9 @@
     <!--[if IE 6]>  
 <script type="text/javascript" src="js/dd_png.js"></script>  
 <script type="text/javascript">  
-DD_belatedPNG.fix('.tel,.head_content');  
+DD_belatedPNG.fix('.logo,.wechat_logo,.weibo_logo,.service_btn,.up');  
 </script>  
-<![endif]--> 
+<![endif]-->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/single.css">
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -310,8 +310,13 @@ DD_belatedPNG.fix('.tel,.head_content');
     $('.up').on('click',function(){
         $(window).scrollTop(0);
     });
+    $(function(){   
+        $('.service').css({"position":"absolute","top":$(window).scrollTop()+300+'px',"right":"4%"});
+    });
     $('body').on('mousewheel',function(){
-        $('.service').css({"position":"absolute","top":"50%","right":"4%"})
+        if ($(window).scrollTop()<=$('body').height()-$(window).height()) {
+            $('.service').css({"position":"absolute","top":$(window).scrollTop()+300+'px',"right":"4%"});
+        };  
     });
 </script>
 </html>

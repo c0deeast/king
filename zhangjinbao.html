@@ -7,9 +7,9 @@
 <!--[if IE 6]>  
 <script type="text/javascript" src="js/dd_png.js"></script>  
 <script type="text/javascript">  
-DD_belatedPNG.fix('.tel,.head_content');  
+DD_belatedPNG.fix('.logo,.wechat_logo,.weibo_logo,.kefu,.top');  
 </script>  
-<![endif]--> 
+<![endif]-->
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 </head>
@@ -56,7 +56,7 @@ DD_belatedPNG.fix('.tel,.head_content');
 			<li><h3 class="title_li">最高年化率</h3><span class="max_rate">1</span>%</li>
 		</ul>
 		<div class="vedio">
-			<embed src="http://player.youku.com/player.php/sid/XMjI0MDIwNDc2/v.swf" quality="high" width="600" height="330" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>
+			<div style="float:left;"><embed src="http://player.youku.com/player.php/sid/XMjI0MDIwNDc2/v.swf" quality="high" width="600" height="330" align="middle" allowScriptAccess="sameDomain" float="right" type="application/x-shockwave-flash"></embed></div>
 			<div class="free_reg">
 				<h1>闪电贷累计投资金额</h1>
 				<h2>闪电贷<span class="shandian_rate">15%</span></h2>
@@ -267,7 +267,7 @@ DD_belatedPNG.fix('.tel,.head_content');
 			<a href="" class="iconfont">&#xf000a;<span>新浪微博</span></a>
 			<a href="" class="iconfont">&#xe6b6;<span>腾讯微博</span></a>
 			<a href="" class="iconfont">&#xe64b;<span>微信</span></a>
-			<h3 class="hot">客服热线：11111111</h3>
+			<a class="hot">客服热线：11111111</a>
 		</div>
 		<div class="copyright">
 			Copyright©2014 掌金联盟 zhangjin.com 版权所有
@@ -297,8 +297,13 @@ DD_belatedPNG.fix('.tel,.head_content');
 	$('.top').on('click',function(){
 		$(window).scrollTop(0);
 	});
+	$(function(){	
+		$('#back_top').css({"position":"absolute","top":$(window).scrollTop()+300+'px',"right":"4%"});
+	});
 	$('body').on('mousewheel',function(){
-		$('#back_top').css({"position":"absolute","top":"50%","right":"4%"})
+		if ($(window).scrollTop()<=$('body').height()-$(window).height()) {
+			$('#back_top').css({"position":"absolute","top":$(window).scrollTop()+300+'px',"right":"4%"});
+		};	
 	});
 </script>
 </html>
