@@ -1,6 +1,5 @@
 html,body{
 	width: 100%;
-	background-color: #e9e9e9;
 }
 *{
 	margin: 0;
@@ -159,7 +158,6 @@ a{
 #main{
 	width: 1002px;
 	margin: 0 auto;
-	overflow: hidden;
 	.main_nav{
 		width: inherit;
 		text-align: left;
@@ -167,57 +165,164 @@ a{
 		line-height: 36px;
 		color: #666;
 	}
-	h1{
-		font-weight: lighter;
-		color: #fff;
-		font-size: 18px;
-		text-indent: 32px;
-		background-color: #0371d2;
-		line-height: 46px;
-	}
-	ul{
-		background: #fff;
-		li{
-			height: 56px;
-			padding: 0 10px 0 24px;
-			margin-left: 14px;
-			line-height: 56px;
-			font-size: 14px;
-			color: #999;
-			border-bottom: 1px solid #e9e9e9;
-			background: url(../images/li_point.png) 0% 50% no-repeat;
-			span{
-				float: right;
-				line-height: 56px;
-				font-size: 14px;
-
+	.slider_box{
+		position: relative;
+		margin-top: 20px;
+		width: 1002px;
+		.left{
+			position: absolute;
+			left: -42px;
+			width: 42px;
+			background-color: #000;
+			height: 256px;
+			margin-top: 8px;
+			cursor: pointer;
+			background: url(../images/left.png) 0 50% no-repeat;
+		}
+		.right{
+			position: absolute;
+			right: -42px;
+			width: 42px;
+			background-color: #000;
+			height: 256px;
+			margin-top: 8px;
+			cursor: pointer;
+			background: url(../images/right.png) 0 50% no-repeat;
+		}
+		.con_slider{
+			position: relative;
+			width: 1002px;
+			height: 270px;
+			overflow: hidden;
+		}
+		ul{
+			position: absolute;
+			height: 270px;
+			overflow: hidden;
+			li{
+				float: left;
+				width: 316px;
+				height: 254px;
+				border: 1px solid #ccc;
+				margin: 8px;
 			}
 		}
-		margin-bottom: 34px;
 	}
-	.page{
-			float: right;
-			a{
+	.content{
+		.content_top{
+			overflow: hidden;
+			.big_img{
+				float: left;
+				display: block;
+				width: 662px;
+				height: 430px;
+				margin-right: 26px;
+			}
+			.program_infro{
+				float: left;
+				.progress{
+					padding: 20px;
+					width: 268px;
+					border: 1px solid #ccc;
+					margin-bottom: 26px;
+					overflow: hidden;
+					h2{
+						font-size: 16px;
+						font-weight: lighter;
+						color: #333;
+						line-height: 40px;
+					}
+					h1{
+						font-size: 32px;
+						font-weight: lighter;
+						color: #333;
+						line-height: 60px;
+					}
+					p{
+						width: 268px;
+						font-size: 14px;
+						color: #666666;
+						line-height: 24px;
+						span{
+							font-size: 14px;
+						}
+					}
+					.support{
+						margin-top: 16px;
+						span{
+							font-size: 14px;
+							color: #666;
+							line-height: 27px;
+						}
+						button{
+							float: right;
+							display: block;
+							border: none;
+							width: 107px;
+							height: 27px;
+							font-size: 16px;
+							color: #fff;
+							background-color: #ffb900;
+							border-bottom: 2px solid #ff9600;
+							cursor: pointer;
+						}
+					}
+					.red{
+						color: #fe0000;
+					}
+				}
+				.org{
+					width: 308px;
+					border: 1px solid #ccc;
+					h1{
+						width: 308px;
+						text-indent: 22px;
+						font-weight: lighter;
+						font-size: 18px;
+						line-height: 48px;
+						color: #666666;
+						border-bottom: 1px solid #ccc;
+					}
+					div{
+						line-height: 30px;
+						font-size: 14px;
+						color: #666666;
+						padding: 29px 22px 30px 22px;
+						img{
+							display: block;
+							float: left;
+							width: 64px;
+							height: 64px;
+						}
+						span{
+							display: block;
+							font-size: 14px;
+							color: #666666;
+							line-height: 22px;
+							margin-left: 76px;
+						}
+						.org_name{
+							font-size: 16px;
+							color: #333333;
+							line-height: 28px;
+						}
+					}
+				}
+			}
+		}
+		.intro{
+			width: 1002px;
+			font-size: 14px;
+			color: #666;
+			line-height: 22px;
+			margin-top: 20px;
+			overflow: hidden;
+			img{
 				display: block;
 				float: left;
-				color: #333;
-				height: 36px;
-				line-height: 36px;
-				padding: 0 2px;
-				margin: 0 2px;
-			}
-			.first_page,.last_page,.page_pre,.page_next{
-				padding: 0 20px;
-			}
-			.page_pre{
-				background-color: #bdd2e4;
-				margin-right: 10px;
-			}
-			.page_next{
-				background-color: #d6d6d6;
-				margin-left: 10px;
 			}
 		}
+	}
 }
 #footer{
 	width: 100%;
