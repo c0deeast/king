@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="description" content="">
+    <!--[if IE 6]>
+    <script type="text/javascript" src="js/dd_png.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.logo,.wechat_logo,.weibo_logo,.service_btn,.up');
+    </script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/less" href="css/perpro.less">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/less-1.7.5.min.js"></script>
+    <script>
+        $(function(){
+            var aLi=$('.photo_list>li');
+            var oPhoto=$('.photo_big');
+            var oTypeBox=$('.type_selector');
+            var oType=$('.sele_menu');
+            var aType=$('.sele_menu>li');
+            var oSubtract=$('.subtract');
+            var oPlus=$('.plus');
+            var oNum=$('.num');
+            oSubtract.click(function(){
+                var x=parseInt(oNum.val());
+                if(x==1)return;
+                oNum.val(x-1);
+            });
+            oPlus.click(function(){
+                var x=parseInt(oNum.val());
+                oNum.val(x+1);
+            });
+            aType.click(function(){
+                aType.css('borderWidth',1);
+                this.style.borderWidth=3+'px';
+            });
+            oTypeBox.css('height',oType.height()+20);
+            for(var i=0;i<aLi.length;i++){
+                var li=aLi.eq(i);
+                var a=i+1;
+                li[0].style.backgroundImage='url(car/'+a+'_min.jpg)';
+                li[0].index=a;
+                li[0].addEventListener('click',function(){
+                    oPhoto.css('background-image','url(car/'+this.index+'.jpg)');
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="header">
+    <div id="header_top_outer">
+        <div id="header_top_inner">
+            <div class="top_link"><span>客服热线：11111111 &nbsp&nbsp&nbsp&nbsp 关注我们：</span><a href="" class="weibo_logo"></a><a href="" class="wechat_logo"></a></div>
+            <ul class="login_register">
+                <li class="register">注册</li>
+                <li class="login">登录</li>
+            </ul>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="logo">
+            掌金联盟
+        </div>
+        <ul>
+            <li><a href="">掌金宝</a></li>
+            <li><a href="">众筹</a></li>
+            <li class="nav_on"><a href="">掌金街</a></li>
+            <li><a href="">掌金论坛</a></li>
+        </ul>
+    </div>
+    <div id="banner">
+        <ul class="banner_con">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="banner_slider">
+            <li class="slider_focus"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<div id="main">
+    <div class="nav_list">
+        <ul class="nav_type">
+            <span class="nav_name">生活类</span>
+            <li>沐浴露</li>
+            <li>洗发水</li>
+            <li>床上用品</li>
+            <li>牙膏牙刷</li>
+            <li>脸盆水桶</li>
+        </ul>
+        <ul class="nav_type">
+            <span class="nav_name">零食类</span>
+            <li>膨化食品</li>
+            <li>辣条</li>
+            <li>泡面</li>
+            <li>糖果饼干</li>
+            <li>饮品</li>
+            <span class="nav_name">我的收藏</span>
+        </ul>
+    </div>
+    <div class="pro_list">
+        <div class="pro_box">
+            <ul class="type">
+                <li><a href="##">首页 > </a></li>
+                <li><a href="##"> 掌金街 > </a></li>
+                <li><a href="##" class="now"> 商品详情</a></li>
+            </ul>
+            <div class="buy_con">
+                <div class="photo_con">
+                    <div class="photo_big">
+                    </div>
+                    <ul class="photo_list">
+                        <li></li>
+                        <li></li>
+                        <li style="margin-right: 0;"></li>
+                    </ul>
+                </div>
+                <div class="pro_con">
+                    <h3>商品名称商品名称商品名称商品名称商品名称商品</h3>
+                        <span class="price_box">价格:<span class="price">¥100</span></span>
+                        <ul class="info_menu">
+                            <li>
+                                <span>销量</span><br>
+                                <span>2000件</span>
+                            </li>
+                            <li>
+                                <span>评价</span><br>
+                                <span>100条</span>
+                            </li>
+                            <li>
+                                <span>收藏</span><br>
+                                <span>3000次</span>
+                            </li>
+                        </ul>
+                        <p class="select_box">
+                            选择学校:
+                            <select name="" id="" class="selector">
+                                <option value="重庆邮电大学">重庆邮电大学</option>
+                                <option value="重庆大学">重庆大学</option>
+                                <option value="西南大学">西南大学</option>
+                                <option value="重庆交通大学">重庆交通大学</option>
+                                <option value="重庆工商大学">重庆工商大学</option>
+                            </select>
+                        </p>
+                        <div class="type_selector">
+                            种类:
+                            <ul class="sele_menu">
+                                <li>
+                                    <img src="car/1_sele.jpg">
+                                </li>
+                                <li>
+                                    <img src="car/1_sele.jpg">
+                                </li>
+                                <li>
+                                    <img src="car/1_sele.jpg">
+                                </li>
+                                <li>
+                                    <img src="car/1_sele.jpg">
+                                </li>
+                                <li>
+                                    <img src="car/1_sele.jpg">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="num_sel">
+                            数量:
+                            <ul>
+                                <li class="subtract">-</li>
+                                <input type="text" class="num" value="1" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                                <li class="plus">+</li>
+                            </ul>
+                        </div>
+                        <div class="buy_btn">
+                            点击收藏
+                        </div>
+                        <div class="buy_btn">
+                            立即购买
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="footer_link">
+        <h3>关注我们</h3>
+        <a href="" class="iconfont">&#xf000a;<span>新浪微博</span></a>
+        <a href="" class="iconfont">&#xe6b6;<span>腾讯微博</span></a>
+        <a href="" class="iconfont">&#xe64b;<span>微信</span></a>
+        <a class="hot">客服热线：11111111</a>
+    </div>
+    <div class="copyright">
+        Copyright©2014 掌金联盟 zhangjin.com 版权所有
+    </div>
+</div>
+<div class="service">
+    <div class="service_btn">
+
+    </div>
+    <div class="up"></div>
+</div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    $('.up').on('click',function(){
+        $(window).scrollTop(0);
+    });
+    $(function(){
+        $('.service').css({"position":"absolute","top":$(window).scrollTop()+300+'px',"right":"4%"});
+    });
+    $('body').on('mousewheel',function(){
+        if ($(window).scrollTop()<=$('body').height()-$(window).height()) {
+            $('.service').css({"position":"absolute","top":$(window).scrollTop()+300+'px',"right":"4%"});
+        };
+    });
+</script>
+</html>
